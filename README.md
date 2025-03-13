@@ -34,13 +34,13 @@ Sau khi đánh bại con rồng đỏ, nhóm giải cứu được Falin. Tuy nh
 
 ### **2. Chiến đấu thời gian thực**
 - **Tấn công cơ bản**:
-  - **Chuột trái**: Tấn công cận chiến (dành cho Laios và Senshi).
+  - **Chuột trái**: Tấn công cận chiến (dành cho Laios và Senshi), tấn công tầm xa (dành cho Marcille và Chilchuck).
   - **Chuột phải**: Phòng thủ (sử dụng khiên hoặc né tránh).
 - **Kỹ năng đặc biệt**:
   - **Phím số (1, 2, 3, ...)**: Sử dụng kỹ năng đặc biệt của nhân vật.
     - **Laios**: Kỹ năng tấn công mạnh hoặc hồi sinh một phần máu.
     - **Marcille**: Phép thuật tấn công từ xa (lửa, băng, sét).
-    - **Chilchuck**: Tấn công từ xa bằng cung tên hoặc đặt bẫy.
+    - **Chilchuck**: Tấn công từ xa bằng ná hoặc đặt bẫy.
     - **Senshi**: Ném rìu hoặc tạo vùng phòng thủ.
 - **Chuyển đổi nhân vật**:
   - **Phím Q**: Chuyển đổi giữa các nhân vật trong nhóm (Laios, Marcille, Chilchuck, Senshi).
@@ -91,7 +91,7 @@ Sau khi đánh bại con rồng đỏ, nhóm giải cứu được Falin. Tuy nh
 ### **3. Chilchuck Tims**
 - **Vai trò**: Thợ khóa bẫy.
 - **Kỹ năng**:
-  - **Tấn công từ xa**: Sử dụng cung tên.
+  - **Tấn công từ xa**: Sử dụng ná bắn đá.
   - **Đặt bẫy**: Vô hiệu hóa hoặc làm chậm quái vật.
 - **Tính cách**: Nhạy cảm, thường khiển trách Laios, nhưng rất quan tâm đến đồng đội.
 
