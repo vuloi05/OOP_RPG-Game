@@ -1,0 +1,18 @@
+
+Tuần 7 (hạn 30/3).
+Công việc: 
+All: thiết kế sơ bộ các lớp được phân công ( vẽ sơ đồ UML, xác định thuộc tính và phương thức)
+Lợi: Cốt truyện
+
+
+
+Tuần 8 (hạn 6/4).
+Mục tiêu hoàn thành 5 lớp cơ bản của 2 hệ thống nhân vật và bản đồ.
+
+Công việc:
+Lợi: triển khai lớp GameManager (khởi tạo game, quản lý bản đồ), nghiên cứu Processing
+Quý: triển khai lớp Character, Player, Monster
+Khải: hỗ trợ Quý (Kiểm tra và viết unit test cho Character)
+Mạnh: triển khai lớp Map, Tile và tạo dữ liệu mẫu cho bản đồ M0
+Đăng: hỗ trợ Mạnh (kiểm tra, viết unit test cho Map)
+Hưng: chuẩn bị dữ liệu mẫu cho NPC và nhiệm vụ.
