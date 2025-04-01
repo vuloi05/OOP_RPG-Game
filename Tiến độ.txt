@@ -4,15 +4,74 @@ Công việc:
 All: thiết kế sơ bộ các lớp được phân công ( vẽ sơ đồ UML, xác định thuộc tính và phương thức)
 Lợi: Cốt truyện
 
+##---------------------------------------------------------------------------------------------------##
 
-
-Tuần 8 (hạn 6/4).
-Mục tiêu hoàn thành 5 lớp cơ bản của 2 hệ thống nhân vật và bản đồ.
+Tuần 8 (hạn 6/4) - Triển khai các lớp cơ bản
+Mục tiêu: hoàn thành 5 lớp cơ bản của 2 hệ thống nhân vật và bản đồ.
 
 Công việc:
-Lợi: triển khai lớp GameManager (khởi tạo game, quản lý bản đồ), nghiên cứu Processing
 Quý: triển khai lớp Character, Player, Monster
 Khải: hỗ trợ Quý (Kiểm tra và viết unit test cho Character)
 Mạnh: triển khai lớp Map, Tile và tạo dữ liệu mẫu cho bản đồ M0
 Đăng: hỗ trợ Mạnh (kiểm tra, viết unit test cho Map)
 Hưng: chuẩn bị dữ liệu mẫu cho NPC và nhiệm vụ.
+Lợi: - triển khai lớp GameManager (khởi tạo game, quản lý bản đồ), nghiên cứu Processing
+     - thiết kế giao diện:
+	+ vẽ bản đồ (lưới ô vuông, màu sắc cho các loại địa hình).
+	+ vẽ nhân vật (hình tròn cho người chơi, quái vật, NPC).
+	+ xử lý di chuyển bằng phím (gọi player.move() khi nhấn phím).
+##-------------------------------------------------------------------------------------------------------##
+
+
+Tuần 9 (hạn 13/4) - Triển khai hệ thống chiến đấu và kỹ năng
+Mục tiêu: hoàn thành hệ thống chiến đấu (BattleSystem, Skill, Effect) và tích hợp với hệ thống nhân vật.
+
+Công việc:
+Quý: tích hợp Player và Monster với hệ thống chiến đấu (gọi battleSystem.strartBattle() khi va chạm)
+Khải: Triển khai lớp BattleSystem, Skill, Effect và kiểm tra tính năng chiến đấu.
+Mạnh: Tạo dữ liệu mẫu cho các bản đồ còn lại (M1, M2, END)
+Đăng: hỗ trợ Mạnh (kiểm tra, viết unit test cho Map)
+Hưng: hỗ trợ Khải (kiểm tra, viết unit test cho BattleSystem).
+Lợi: - tiếp tục GameManager (xử lý va chạm, chuyển bản đồ)
+     - thiết kế giao diện:
+	+ hiển thị hộp thoại chiến đấu khi người chơi va chạm với quái vật
+	+ hiện thị thanh HP, MP của người chơi và quái vật
+	+ xử lý lựa chọn hành động (tấn công, kỹ năng)
+
+##------------------------------------------------------------------------------------------------------##
+
+
+Tuần 10 (hạn 20/4) - Triển khai hệ thống vật phẩm, nhiệm vụ, NPC
+Mục tiêu: hoàn thành các tính năng bổ sung (Item, Equipment, Inventory, Quest, NPC).
+
+Công việc:
+Quý: hỗ trợ tích hợp PLayer với Inventory và Quest
+Mạnh: hỗ trợ tích hợp Map với NPC (đặt NPC trên bản đồ)
+Khải: hỗ trợ Đăng (kiểm tra, viết unit test cho Inventory).
+Đăng: triển khai lớp Item, Equitment, Inventory và tạo dữ liệu mẫu cho vật phẩm
+Hưng: triển khai lớp Quest, NPC và tạo dữ liệu mẫu cho NPC, nhiệm vụ
+Lợi: - triển khai lớp SaveManager (lưu/tải trạng thái game)
+     - thiết kế giao diện cho vật phẩm, nhiệm vụ và NPC:
+	+ hiện thị túi đồ (Inventory) khi nhấn phím (danh sách vật phẩm)
+	+ hiển thị nhiệm vụ (activeQuests) khi nhấn phím.
+	+ hiển thị câu thoại NPC và menu tương tác (mua đồ, nhận nhiệm vụ).
+
+##------------------------------------------------------------------------------------------------------##
+
+Tuần 11 (hạn 27/4) - Tích hợp và kiểm tra toàn bộ hệ thống
+Mục tiêu: Tích hợp tất cả các module, kiểm tra và sửa lỗi
+
+Công việc:
+Quý: kiểm tra và sửa lỗi cho hệ thống nhân vật
+Mạnh: kiểm tra và sửa lỗi cho hệ thống bản đồ
+Khải: kiểm tra và sửa lỗi cho hệ thống chiến đấu
+Đăng: kiểm tra và sửa lỗi cho hệ thống vật phẩm
+Hưng: kiểm tra và sửa lỗi cho hệ thống nhiệm vụ và NPC
+Lợi: - tích hợp các module (GameManager, Character, Map, BattleSystem, Inventory, Quest, NPC), kiểm tra toàn bộ hệ thống
+     - hoàn thiện giao diện đồ họa:
+	+ thêm sprite (nếu có) hoặc cải thiện giao diện (màu sắc, kích thước)
+	+ hiển thị thông tin bổ sung (kết quả chiến đấu, phần thưởng nhiệm vụ).
+	+ tối ưu hiệu suất đồ họa (giảm lag nếu rảnh).
+##------------------------------------------------------------------------------------------------------##
+
+Tuần 12 (hạn 4/5) - Hoàn thiện
