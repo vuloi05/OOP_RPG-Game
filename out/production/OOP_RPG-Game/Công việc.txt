@@ -1,0 +1,28 @@
+1. Hệ thống nhân vật (Quý, Khải)
+ - Character
+ - Player
+ - Monster
+
+2. Hệ thống bản đồ (Mạnh)
+ - Map
+ - Tile
+
+3. Hệ thống chiến đấu, kỹ năng (Khải, Quý)
+ - BattleSystem
+ - Skill
+ - Effect
+
+4. Hệ thống vật phẩm, túi đồ (Đăng)
+ - Item
+ - Equitment
+ - Inventory
+
+5. Hệ thống nhiệm vụ, NPC (Hưng)
+ - Quest
+ - NPC
+
+6. Hệ thống quản lý game (Lợi)
+ - GameManager
+ - SaveManager
+
+7. Đồ họa + cốt truyện (Lợi)

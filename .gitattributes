@@ -1,0 +1,16 @@
+# Tự động xử lý line endings phù hợp OS
+* text=auto
+
+# Với các file code, luôn dùng LF trong repo, CRLF khi checkout trên Windows
+*.java text
+*.xml  text
+*.md   text
+*.txt  text
+
+# Giữ nguyên binary files, không đụng đến line endings
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.jar  binary
+*.class binary
