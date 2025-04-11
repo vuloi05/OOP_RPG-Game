@@ -1,6 +1,7 @@
-package map.src;
+package main;
 
 // Import
+
 import javax.swing.JFrame;
 
 public class GameLauncher {
