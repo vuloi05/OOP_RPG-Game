@@ -1,3 +1,4 @@
+// Đây là file KeyHandler.java
 package characters.util;
 
 import java.awt.event.KeyEvent;

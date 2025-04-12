@@ -1,3 +1,4 @@
+// Đây là file Entity.java
 package characters.entity;
 
 import java.awt.*;

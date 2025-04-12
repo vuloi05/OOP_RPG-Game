@@ -1,10 +1,11 @@
+// Đây là file GamePanel.java
 package main;
 
 // Import
 import characters.util.CollisionChecker;
 import characters.util.KeyHandler;
 import characters.entity.Player;
-import map.src.tile.TileManager;
+import map.src.tile.Map;
 
 import javax.swing.JPanel;
 import java.awt.*;
@@ -30,14 +31,16 @@ public class GamePanel extends JPanel implements Runnable {
     public final int worldWidth = tileSize * maxWorldCol;
     public final int worldHeight = tileSize * maxWorldRow;
 
-    public TileManager tileManager = new TileManager(this);
+    // Thay thế TileManager bằng Map
+    public Map currentMap;
     KeyHandler keyHandler = new KeyHandler();
     Thread gameThread;
     public CollisionChecker collisionChecker = new CollisionChecker(this);
     public Player player = new Player(this, keyHandler);
 
     public GamePanel() {
-
+        // Khởi tạo map đầu tiên
+        currentMap = new Map(this, "MapTest");
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
         this.setBackground(Color.black);
         this.setDoubleBuffered(true);
@@ -46,15 +49,13 @@ public class GamePanel extends JPanel implements Runnable {
     }
 
     public void startGameThread() {
-
         gameThread = new Thread(this);
         gameThread.start();
     }
 
     @Override
     public void run() {
-
-        double drawInterval = (double) 1000000000 / FPS; // 0.01666 seconds
+        double drawInterval = (double) 1000000000 / FPS;
         double delta = 0;
         long lastTime = System.nanoTime();
         long currentTime;
@@ -62,7 +63,6 @@ public class GamePanel extends JPanel implements Runnable {
         int drawCount = 0;
 
         while (gameThread != null) {
-
             currentTime = System.nanoTime();
 
             delta += (currentTime - lastTime) / drawInterval;
@@ -85,20 +85,18 @@ public class GamePanel extends JPanel implements Runnable {
     }
 
     public void update() {
-
         player.update();
+        // Có thể thêm logic update map/npc/quái vật ở đây
     }
 
     public void paintComponent(Graphics g) {
-
         super.paintComponent(g);
-
         Graphics2D g2 = (Graphics2D) g;
 
-        tileManager.draw(g2);
+        // Thay đổi cách vẽ map
+        currentMap.draw(g2, player);
         player.draw(g2);
 
         g2.dispose();
     }
-
 }

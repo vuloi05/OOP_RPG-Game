@@ -1,3 +1,4 @@
+// Đây là file Player.java
 package characters.entity;
 
 import characters.util.KeyHandler;
@@ -21,21 +22,22 @@ public class Player extends Entity {
         screenX = gp.screenWidth / 2 - (gp.tileSize / 2);
         screenY = gp.screenHeight / 2 - (gp.tileSize / 2);
 
+        // Tùy chỉnh kích thước vật rắn trên player
         solidArea = new Rectangle();
         solidArea.x = 58;
-        solidArea.y = 96;
+        solidArea.y = 100;
         solidArea.width = 16;
-        solidArea.height = 38;
+        solidArea.height = 30;
 
         setDefaultValues();
         getPlayerImage();
     }
 
     public void setDefaultValues() {
-        worldX = gp.tileSize * 23;
-        worldY = gp.tileSize * 21;
+        worldX = gp.tileSize * 25;
+        worldY = gp.tileSize * 25;
         speed = 4;
-        direction = "down";
+        direction = "up"; // Hướng nhìn lên trên
         moving = false;
     }
 
@@ -102,5 +104,9 @@ public class Player extends Entity {
 
         // Vẽ hình nhân vật
         g2.drawImage(image, screenX, screenY, drawWidth, drawHeight, null);
+
+        // DEBUG: Vẽ vùng va chạm
+        g2.setColor(new Color(255, 0, 0, 128)); // Màu đỏ trong suốt
+        g2.drawRect(screenX + solidArea.x, screenY + solidArea.y, solidArea.width, solidArea.height);
     }
 }
