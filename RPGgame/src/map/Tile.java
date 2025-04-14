@@ -1,10 +1,10 @@
-package com.dungeondelicacy.rpg.map;
+package map;
 
-import com.dungeondelicacy.rpg.characters.Player;
+import characters.Player;
 
 public class Tile implements Interactable {
-    private String type; // Loại địa hình (đất, cỏ, nước, v.v.)
-    private boolean isPassable; // Có thể đi qua không
+    private final String type; // Loại địa hình (đất, cỏ, nước, v.v.)
+    private final boolean isPassable; // Có thể đi qua không
 
     public Tile(String type, boolean isPassable) {
         this.type = type;

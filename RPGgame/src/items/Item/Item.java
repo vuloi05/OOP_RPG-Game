@@ -1,4 +1,4 @@
-package com.dungeondelicacy.rpg.items;
+package items.Item;
 
 public abstract class Item {
     private int ItemId;
@@ -13,10 +13,25 @@ public abstract class Item {
         this.Value = Value;
     }
 
+    public int getItemId() {
+        return ItemId;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+    public String getDescription() {
+        return Description;
+    }
+
+    public int getValue() {
+        return Value;
+    }
+
     public abstract void use();
 
     public void displayItemInfo() {
-        System.out.println("ID: " + ItemId);
         System.out.println("Tên: " + Name);
         System.out.println("Mô tả: " + Description);
         System.out.println("Giá trị: " + Value);
