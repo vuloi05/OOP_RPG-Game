@@ -2,15 +2,17 @@ package items.Item;
 
 public abstract class Item {
     private int ItemId;
-    private String Name;
-    private String Description;
-    private int Value;
+    private String Name;    // tên
+    private String Description; // mô tả
+    private int Value;  // giá bản vvv
+    private String imagePath;  // ảnh
 
-    public Item(int ItemId, String Name, String Description, int Value) {
+    public Item(int ItemId, String Name, String Description, int Value, String imagePath) {
         this.ItemId = ItemId;
         this.Name = Name;
         this.Description = Description;
         this.Value = Value;
+        this.imagePath = imagePath;
     }
 
     public int getItemId() {
@@ -29,7 +31,11 @@ public abstract class Item {
         return Value;
     }
 
-    public abstract void use();
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public abstract void useItem();
 
     public void displayItemInfo() {
         System.out.println("Tên: " + Name);

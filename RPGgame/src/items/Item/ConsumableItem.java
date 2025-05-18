@@ -1,11 +1,13 @@
 package items.Item;
 
+// vật phẩm tiêu thụ
+
 public class ConsumableItem extends Item {
     private int restoreAmount;
     private String restoreType;
 
-    public ConsumableItem(int itemId, String name, String description, int value, int restoreAmount, String restoreType) {
-        super(itemId, name, description, value);
+    public ConsumableItem(int itemId, String name, String description, int value, String imagePath, int restoreAmount, String restoreType) {
+        super(itemId, name, description, value, imagePath);
         this.restoreAmount = restoreAmount;
         this.restoreType = restoreType;
     }
@@ -19,7 +21,7 @@ public class ConsumableItem extends Item {
     }
 
     @Override
-    public void use() {
+    public void useItem() {
         System.out.println("Sử dụng " + getName() + ": Hồi phục " + restoreAmount + " " + restoreType);
     }
 }

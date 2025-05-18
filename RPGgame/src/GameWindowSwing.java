@@ -12,6 +12,9 @@ import java.util.List;
 import items.Item.Item;
 import items.Item.Equipment;
 import items.Item.ConsumableItem;
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 public class GameWindowSwing extends JPanel {
     private final int width = 800;
@@ -89,6 +92,7 @@ public class GameWindowSwing extends JPanel {
         g.setColor(Color.RED);
         g.fillOval(x, y, radius, radius);
     }
+
     private void drawInventory(Graphics g) {
         Player player = gameManager.getPlayer();
         if (player == null) return;
@@ -115,26 +119,29 @@ public class GameWindowSwing extends JPanel {
 
             Item item = inventory.get(i);
 
+            // Vẽ khung
             g.setColor(Color.GRAY);
             g.fillRect(x, y, slotSize, slotSize);
             g.setColor(Color.BLACK);
             g.drawRect(x, y, slotSize, slotSize);
 
+            // Vẽ tên vật phẩm
             g.setFont(new Font("Arial", Font.PLAIN, 10));
             g.setColor(Color.WHITE);
-            g.drawString(item.getName(), x + 3, y + 15);
+            g.drawString(item.getName(), x + 3, y + 12);
 
-            if (item instanceof Equipment) {
-                g.setColor(Color.ORANGE);
-            } else if (item instanceof ConsumableItem) {
-                g.setColor(Color.CYAN);
-            } else {
-                g.setColor(Color.WHITE);
+            // Load và hiển thị ảnh từ imagePath
+            try {
+                Image img = ImageIO.read(getClass().getResourceAsStream(item.getImagePath()));
+                img = img.getScaledInstance(slotSize - 10, slotSize - 20, Image.SCALE_SMOOTH);
+                g.drawImage(img, x + 5, y + 15, null);
+            } catch (IOException | IllegalArgumentException e) {
+                g.setColor(Color.RED);
+                g.drawString("No Img", x + 5, y + 35);
             }
-
-            g.fillRect(x + 5, y + 20, slotSize - 10, slotSize - 25);
         }
     }
+
 
 
     private void handleInput(int key) {

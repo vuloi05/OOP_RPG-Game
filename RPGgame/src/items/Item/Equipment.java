@@ -1,12 +1,14 @@
 package items.Item;
 
+// trang bị gồm dame , giáp, loại trang bị (vũ khí giáp nhẫn vv)
+
 public class Equipment extends Item {
-    private int attackPower;
-    private int defensePower;
+    private int attackPower;    // dame
+    private int defensePower;   // phòng thủ
     private String equipmentType;
 
-    public Equipment(int itemId, String name, String description, int value, int attackPower, int defensePower, String equipmentType) {
-        super(itemId, name, description, value);
+    public Equipment(int itemId, String name, String description, int value, String imagePath, int attackPower, int defensePower, String equipmentType) {
+        super(itemId, name, description, value, imagePath);
         this.attackPower = attackPower;
         this.defensePower = defensePower;
         this.equipmentType = equipmentType;
@@ -25,9 +27,9 @@ public class Equipment extends Item {
     }
 
     @Override
-    public void use() {
+    public void useItem() {
         System.out.println("Trang bị " + getName() + ": Loại " + equipmentType);
-        System.out.println("Tăng " + attackPower + " attack.");
-        System.out.println("Tăng " + defensePower + " defense.");
+        System.out.println("Tăng " + attackPower + " sức tấn công.");
+        System.out.println("Tăng " + defensePower + " phòng thủ.");
     }
 }
