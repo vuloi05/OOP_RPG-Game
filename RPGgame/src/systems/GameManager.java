@@ -25,8 +25,8 @@ public class GameManager {
 
     public void startGame() {
         player = new Player("Laios", 1, 1); // Vị trí ban đầu (1,1)
-        player.addItem(new Equipment(1, "Kiếm Gỗ", "Vũ khí cơ bản", 10, 5, 0, "Vũ khí"));
-        player.addItem(new ConsumableItem(2, "Bình Máu", "Hồi 50 HP", 5, 50, "HP"));
+        player.addItem(new Equipment(1, "Kiếm Gỗ", "Vũ khí cơ bản", 10, "items/Item/Resource/image/normalsword.jpg",5, 0, "Vũ khí"));
+        player.addItem(new ConsumableItem(2, "Bình Máu", "Hồi 50 HP", 5,"items/Item/Resource/image/hppotion.png", 50, "HP"));
         initializeMaps();
         currentMap = maps.get(0);
         mapHistory.push(currentMap);
